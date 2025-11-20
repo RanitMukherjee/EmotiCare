@@ -2,4 +2,19 @@
 name = "emoticare"
 version = "0.1.0"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "google-api-python-client>=2.0.0",
+    "h5py>=3.8",
+    "langchain-core>=0.0.1",
+    "langchain-groq>=0.0.1",
+    "langgraph>=0.0.1",
+    "numpy>=1.24",
+    "ollama>=0.1.0",
+    "opencv-python>=4.7",
+    "pyaudio>=0.2.11",
+    "python-dotenv>=1.0",
+    "pyttsx3>=2.9.0",
+    "speechrecognition>=3.8.1",
+    "streamlit>=1.40",
+    "tensorflow>=2.12",
+]
