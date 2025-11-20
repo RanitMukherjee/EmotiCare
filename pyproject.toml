@@ -16,5 +16,6 @@ dependencies = [
     "pyttsx3>=2.9.0",
     "speechrecognition>=3.8.1",
     "streamlit>=1.40",
+    "streamlit-webrtc>=0.64.0",
     "tensorflow>=2.12",
 ]

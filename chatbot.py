@@ -27,7 +27,7 @@ def initialize_chatbot():
     """
     # Initialize Groq client
     groq_api_key = os.getenv("GROQ_API_KEY")
-    groq_chat = ChatGroq(temperature=0.7, model_name="mixtral-8x7b-32768", groq_api_key=groq_api_key)
+    groq_chat = ChatGroq(temperature=0.7, model_name="moonshotai/kimi-k2-instruct-0905", groq_api_key=groq_api_key)
 
     # Define a new graph
     workflow = StateGraph(state_schema=MessagesState)
