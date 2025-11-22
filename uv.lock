@@ -470,21 +470,21 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "google-api-python-client", specifier = ">=2.0.0" },
+    { name = "google-api-python-client", specifier = ">=2.150.0" },
     { name = "gtts", specifier = ">=2.5.4" },
-    { name = "h5py", specifier = ">=3.8" },
-    { name = "langchain-core", specifier = ">=0.0.1" },
-    { name = "langchain-groq", specifier = ">=0.0.1" },
-    { name = "langgraph", specifier = ">=0.0.1" },
-    { name = "numpy", specifier = ">=1.24" },
-    { name = "ollama", specifier = ">=0.1.0" },
-    { name = "opencv-python-headless", specifier = ">=4.7" },
-    { name = "pyaudio", specifier = ">=0.2.11" },
-    { name = "python-dotenv", specifier = ">=1.0" },
-    { name = "speechrecognition", specifier = ">=3.8.1" },
-    { name = "streamlit", specifier = ">=1.40" },
-    { name = "streamlit-webrtc", specifier = ">=0.64.0" },
-    { name = "tensorflow", specifier = ">=2.12" },
+    { name = "h5py", specifier = ">=3.12.0" },
+    { name = "langchain-core", specifier = ">=0.3.10" },
+    { name = "langchain-groq", specifier = ">=0.2.0" },
+    { name = "langgraph", specifier = ">=0.2.40" },
+    { name = "numpy", specifier = ">=1.26.4" },
+    { name = "ollama", specifier = ">=0.3.3" },
+    { name = "opencv-python-headless", specifier = ">=4.10.0.84" },
+    { name = "pyaudio", specifier = ">=0.2.14" },
+    { name = "python-dotenv", specifier = ">=1.0.1" },
+    { name = "speechrecognition", specifier = ">=3.10.4" },
+    { name = "streamlit", specifier = ">=1.40.0" },
+    { name = "streamlit-webrtc", specifier = ">=0.47.0" },
+    { name = "tensorflow", specifier = ">=2.17.0" },
 ]
 
 [[package]]

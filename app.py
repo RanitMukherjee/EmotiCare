@@ -15,8 +15,8 @@ import webbrowser
 # Load environment variables
 load_dotenv()
 
-# Initialize the chatbot
-groq_chat, app, config = initialize_chatbot()
+# Initialize the chatbot (Global components)
+groq_chat = initialize_chatbot()
 
 # Streamlit app
 st.title("Mental Health Companion Chatbot")
@@ -109,7 +109,7 @@ def handle_input(user_input):
 
         # Generate a response
         full_response = generate_response(
-            user_input, emotion_label, groq_chat, app, config, st.session_state.messages
+            user_input, emotion_label, groq_chat, st.session_state.messages
         )
 
         # Extract the chatbot's message (before the delimiter)
