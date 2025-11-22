@@ -128,19 +128,25 @@ def process_voice_from_webrtc():
     audio_data = webrtc_ctx.audio_processor.stop_recording()
 
     if not audio_data:
+        st.warning("No audio data captured.")
         return None
 
     try:
         # Combine audio frames
         audio_combined = np.concatenate(audio_data, axis=0)
 
-        # Convert to proper format for speech recognition
-        # Flatten if multi-channel
+        # Handle stereo audio (convert to mono)
         if len(audio_combined.shape) > 1:
-            audio_combined = audio_combined.flatten()
+            audio_combined = np.mean(audio_combined, axis=1)
+
+        # Check for silence to avoid division by zero
+        max_val = np.max(np.abs(audio_combined))
+        if max_val == 0:
+            st.warning("Audio is silent.")
+            return None
 
         # Normalize and convert to int16
-        audio_normalized = np.int16(audio_combined / np.max(np.abs(audio_combined)) * 32767)
+        audio_normalized = np.int16(audio_combined / max_val * 32767)
 
         # Create AudioData for speech recognition
         recognizer = sr.Recognizer()
@@ -169,7 +175,7 @@ if webrtc_ctx.state.playing:
     placeholder = st.empty()
     with placeholder.container():
         current_emotion = get_current_emotion()
-        st.info(f"Current detected emotion: **{current_emotion}**")
+        st.info(f"Current detected emotion (updates on interaction): **{current_emotion}**")
         st.session_state.current_emotion = current_emotion
 
 # Display previous messages
