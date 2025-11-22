@@ -3,8 +3,8 @@ import numpy as np
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 
-# Load the trained model
-model_best = load_model('model.h5')
+# Load the trained model (compile=False for inference only)
+model_best = load_model('model.h5', compile=False)
 
 # Classes for 7 emotional states
 class_names = ['Angry', 'Disgusted', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral']
